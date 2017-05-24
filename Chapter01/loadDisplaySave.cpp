@@ -23,6 +23,7 @@
 
 void onMouse( int event, int x, int y, int flags, void* param)	{
 	
+	int a=1,b=2;
 	cv::Mat *im= reinterpret_cast<cv::Mat*>(param);
 
     switch (event) {	// dispatch the event
@@ -33,6 +34,7 @@ void onMouse( int event, int x, int y, int flags, void* param)	{
 			std::cout << "at (" << x << "," << y << ") value is: " 
 				      << static_cast<int>(im->at<uchar>(cv::Point(x,y))) << std::endl;
 			break;
+
 	}
 }
 
